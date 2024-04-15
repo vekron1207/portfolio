@@ -90,15 +90,14 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Analyst",
-    company_name: "GlobalLogic Technologies",
-    icon: globalLogic,
+    title: "Full Stack Developer",
+    company_name: "NCERT",
+    icon: NCERT,
     iconBg: "#383E56",
-    date: "January 2020 - September 2021",
+    date: "July 2023 - Present",
     points: [
-      "Collaborated with Google as an on-site client, contributing to the maintenance of the company's Knowledge Graph data",
-      "Ensured the accuracy and quality of both internal and external databases by updating and maintaining them, providing users with up-to-date information.",
-      "Maintained a high level of quality, consistently achieving a benchmark of 95% or higher.",
+      "Led the development of a tailored Management Information System using PHP, HTML, CSS, XAMPP, and Apache, focused on precise budget oversight for diverse NCERT departments.",
+      "Collaborated extensively across departments to craft a seamless web application, streamlining budget tracking and enhancing financial decision-making.",
     ],
   },
   {
@@ -115,14 +114,15 @@ const experiences = [
     ],
   },
   {
-    title: "Full Stack Developer",
-    company_name: "NCERT",
-    icon: NCERT,
+    title: "Analyst",
+    company_name: "GlobalLogic Technologies",
+    icon: globalLogic,
     iconBg: "#383E56",
-    date: "July 2023 - Present",
+    date: "January 2020 - September 2021",
     points: [
-      "Led the development of a tailored Management Information System using PHP, HTML, CSS, XAMPP, and Apache, focused on precise budget oversight for diverse NCERT departments.",
-      "Collaborated extensively across departments to craft a seamless web application, streamlining budget tracking and enhancing financial decision-making.",
+      "Collaborated with Google as an on-site client, contributing to the maintenance of the company's Knowledge Graph data",
+      "Ensured the accuracy and quality of both internal and external databases by updating and maintaining them, providing users with up-to-date information.",
+      "Maintained a high level of quality, consistently achieving a benchmark of 95% or higher.",
     ],
   },
 ];
