@@ -17,6 +17,8 @@ import {
   NCERT,
   yojana,
   autoEmail,
+  githubImg,
+  linkedInImg,
 } from "../assets";
 
 export const navLinks = [
@@ -189,4 +191,13 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+const socialLinks = [
+  { name: github, image: githubImg, link: "https://github.com/vekron1207" },
+  {
+    name: linkedIn,
+    image: linkedInImg,
+    link: "https://www.linkedin.com/in/varun-kashyap1207/",
+  },
+];
+
+export { services, technologies, experiences, projects, socialLinks };
