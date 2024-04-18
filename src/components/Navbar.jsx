@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
+import { socialLinks } from "../constants";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -59,6 +60,14 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          {/* Insert social media links here */}
+          {socialLinks.map((social) => (
+            <li key={social.name}>
+              <a href={social.link} target="_blank" rel="noopener noreferrer">
+                <img src={social.image} alt={social.name} className="w-6 h-6" />
+              </a>
+            </li>
+          ))}
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -87,6 +96,22 @@ const Navbar = () => {
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+              {/* Social media links */}
+              {socialLinks.map((social) => (
+                <li key={social.name}>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={social.image}
+                      alt={social.name}
+                      className="w-6 h-6"
+                    />
+                  </a>
                 </li>
               ))}
             </ul>

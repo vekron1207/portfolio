@@ -192,9 +192,9 @@ const projects = [
 ];
 
 const socialLinks = [
-  { name: github, image: githubImg, link: "https://github.com/vekron1207" },
+  { name: "github", image: githubImg, link: "https://github.com/vekron1207" },
   {
-    name: linkedIn,
+    name: "linkedIn",
     image: linkedInImg,
     link: "https://www.linkedin.com/in/varun-kashyap1207/",
   },

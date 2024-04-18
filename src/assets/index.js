@@ -21,6 +21,8 @@ import typescript from "./tech/typescript.png";
 import globalLogic from "./company/globalLogic.png";
 import NCERT from "./company/NCERT.png";
 import optym from "./company/optym.png";
+import githubImg from "./socialLinks/githubImg.png";
+import linkedInImg from "./socialLinks/linkedInImg.png";
 
 export {
   logo,
@@ -46,4 +48,6 @@ export {
   globalLogic,
   NCERT,
   optym,
+  githubImg,
+  linkedInImg,
 };
