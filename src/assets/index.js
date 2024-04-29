@@ -23,6 +23,7 @@ import NCERT from "./company/NCERT.png";
 import optym from "./company/optym.png";
 import githubImg from "./socialLinks/githubImg.png";
 import linkedInImg from "./socialLinks/linkedInImg.png";
+import Android from "./Android.png";
 
 export {
   logo,
@@ -50,4 +51,5 @@ export {
   optym,
   githubImg,
   linkedInImg,
+  Android,
 };

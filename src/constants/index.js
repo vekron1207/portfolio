@@ -19,6 +19,7 @@ import {
   autoEmail,
   githubImg,
   linkedInImg,
+  Android,
 } from "../assets";
 
 export const navLinks = [
@@ -38,17 +39,17 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Android Developer",
+    icon: Android,
   },
   {
     title: "Backend Developer",
     icon: backend,
   },
-  {
-    title: "Full Stack Developer",
-    icon: fullstack,
-  },
+  // {
+  //   title: "Full Stack Developer",
+  //   icon: fullstack,
+  // },
 ];
 
 const technologies = [
