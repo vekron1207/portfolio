@@ -1,6 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
-import CircleFollower from './CircileFollower';
 
 import {
   About,
@@ -18,7 +17,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        <CircleFollower />
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
