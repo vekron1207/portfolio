@@ -1,21 +1,37 @@
 import { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Preload, useGLTF } from "@react-three/drei";
+import { useSpring, animated } from '@react-spring/three';
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const Computers = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const meshRef = useRef();
+  const [hovered, setHovered] = useState(false);
+  const [rotationY, setRotationY] = useState(0);
 
-  // Use frame hook to rotate the model slowly
+  // Spring animation for hover effect
+  const { scale } = useSpring({
+    scale: hovered ? 1.05 : 1,
+    config: { mass: 1, tension: 170, friction: 26 },
+  });
+
+  // Use frame hook to rotate the model along its Y axis
   useFrame(() => {
+    const newRotationY = rotationY + 0.002; // Adjust the speed of rotation here
+    setRotationY(newRotationY);
     if (meshRef.current) {
-      meshRef.current.rotation.y += 0.002; // Adjust the speed of rotation here
+      meshRef.current.rotation.y = newRotationY;
     }
   });
 
   return (
-    <mesh ref={meshRef}>
+    <animated.mesh
+      ref={meshRef}
+      scale={scale}
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+    >
       <hemisphereLight intensity={3.15} groundColor="blue" />
       <spotLight
         position={[-20, 50, 10]}
@@ -29,11 +45,11 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={9} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2, 2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={0.7}
+        position={[0, -1.5, 0]} // Centered position
+        rotation={[0, 0, 0]} // Start with no rotation
       />
-    </mesh>
+    </animated.mesh>
   );
 };
 
@@ -60,18 +76,11 @@ const ComputersCanvas = () => {
       frameLoop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [0, 0, 5], fov: 45 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          enableRotate={false}
-          enablePan={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
+        <Computers />
       </Suspense>
       <Preload all />
     </Canvas>

@@ -14,8 +14,10 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@react-spring/three": "^9.7.3",
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
+    "@tweenjs/tween.js": "^23.1.2",
     "framer-motion": "^10.17.9",
     "maath": "^0.10.7",
     "react": "^18.2.0",
