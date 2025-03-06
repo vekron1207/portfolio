@@ -46,10 +46,10 @@ const services = [
     title: "Backend Developer",
     icon: backend,
   },
-  // {
-  //   title: "Full Stack Developer",
-  //   icon: fullstack,
-  // },
+  {
+    title: "Full Stack Developer",
+    icon: fullstack,
+  },
 ];
 
 const technologies = [
@@ -99,7 +99,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "July 2023 - Present",
     points: [
-      "Led the development of a tailored Management Information System using PHP, HTML, CSS, XAMPP, and Apache, focused on precise budget oversight for diverse NCERT departments.",
+      "Designed, developed, and optimized multiple REST APIs, ensuring seamless integration with web and application servers.",
       "Collaborated extensively across departments to craft a seamless web application, streamlining budget tracking and enhancing financial decision-making.",
     ],
   },
@@ -123,9 +123,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "January 2020 - September 2021",
     points: [
-      "Collaborated with Google as an on-site client, contributing to the maintenance of the company's Knowledge Graph data",
-      "Ensured the accuracy and quality of both internal and external databases by updating and maintaining them, providing users with up-to-date information.",
-      "Maintained a high level of quality, consistently achieving a benchmark of 95% or higher.",
+      "Worked on Java-based technologies including Maven build tool, JSP, and Servlets.",
+      "Documented application design flows for peers and clients.",
+      "erformed regular health checks and monitoring to ensure 0 downtime.",
     ],
   },
 ];
@@ -158,7 +158,7 @@ const projects = [
       "This MIS(Management Information System) portal, 'YOJANA', is created with the objectives to ensure the effective monitoring of programmes, updating of the progress of programmes and quick retrieval of essential information. It shall provide information on the PAC/PAB approved projects carried out by the Constituent Units of NCERT.",
     tags: [
       {
-        name: "php",
+        name: "Pyhton",
         color: "blue-text-gradient",
       },
       {
